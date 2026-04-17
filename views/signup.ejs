@@ -1,0 +1,104 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up Form</title>
+     
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>sign up Form</h2>
+
+        <form action="/saveform" method="get">
+            <label>Full Name</label>
+            <input type="text"  name="username" placeholder="Enter your name" required>
+
+            <label>Email</label>
+            <input type="email" name="userEmail" placeholder="Enter your email" required>
+           
+            <label>Password</label>
+            <input type="password" name="userpassword" placeholder="Enter your password" required>
+
+            <label>Phone</label>
+            <input type="tel" name="userphone"  placeholder="Enter your phone number">
+
+            <label>Gender</label>
+            <select name="gender">
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Date of Birth</label>
+            <input type="date" name="userdob">
+
+            <label>Address</label>
+            <textarea rows="3" name="useradress" placeholder="Enter your address"></textarea>
+
+            <button type="submit">sign up</button>
+        </form>
+    </div>
+
+</body>
+</html>
